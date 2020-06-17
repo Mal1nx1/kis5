@@ -1,0 +1,98 @@
+# Методы компании
+getCompanies:
+  path:       /companies
+  controller: App\Controller\CompanyController::getCompanies
+  methods:    GET
+
+getCompany:
+  path:       /company/{id}
+  controller: App\Controller\CompanyController::getCompany
+  methods:    GET
+  defaults:
+    id: 1
+
+postCompany:
+  path:       /company
+  controller: App\Controller\CompanyController::createCompany
+  methods:    POST
+
+updateCompany:
+  path:       /company/{id}
+  controller: App\Controller\CompanyController::updateCompany
+  methods:    PATCH
+  defaults:
+    id: 1
+
+deleteCompany:
+  path:       /company/{id}
+  controller: App\Controller\CompanyController::deleteCompany
+  methods:    DELETE
+  defaults:
+    id: 1
+
+# Методы пользователя
+getUsers:
+  path:       /users
+  controller: App\Controller\UserController::getUsers
+  methods:    GET
+
+getUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::getUsero
+  methods:    GET
+  defaults:
+    id: 1
+
+postUser:
+  path:       /users
+  controller: App\Controller\UserController::createUser
+  methods:    POST
+
+putUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::putUser
+  methods:    PUT
+  defaults:
+    id: 1
+
+deleteUser:
+  path:       /user/{id}
+  controller: App\Controller\UserController::deleteUser
+  methods:    DELETE
+  defaults:
+    id: 1
+
+# Методы вакансии
+getVacanciesByCompanyId:
+  path:       /vacancies/{companyId}
+  controller: App\Controller\VacancyController::getVacancies
+  methods:    GET
+  defaults:
+    companyId: 1
+
+getVacancy:
+  path:       /vacancy/{id}
+  controller: App\Controller\VacancyController::getVacancy
+  methods:    GET
+  defaults:
+    id: 1
+
+postVacancy:
+  path:       /vacancy
+  controller: App\Controller\VacancyController::createVacancy
+  methods:    POST
+
+patchVacancy:
+  path:       /vacancy/{id}
+  controller: App\Controller\VacancyController::updateVacancy
+  methods:    PATCH
+  defaults:
+    id: 1
+
+deleteVacancy:
+  path:       /vacancy/{id}
+  controller: App\Controller\VacancyController::deleteVacancy
+  methods:    DELETE
+  defaults:
+    id: 1
+
